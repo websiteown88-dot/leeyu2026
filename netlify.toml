@@ -3,3 +3,15 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/_facilities/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/_courses/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "text/plain; charset=utf-8"
