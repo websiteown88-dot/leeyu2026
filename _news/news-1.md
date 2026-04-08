@@ -1,5 +1,5 @@
 ---
-title: 旗艦館即將盛大試營運！首波創始會員限量招募
+title: 盛大試營運！首波創始會員限量招募
 date: 2026.04.01
 tag: HOT NEWS
 image: /images/uploads/gemini_generated_image_9v24wo9v24wo9v24.png
