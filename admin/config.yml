@@ -25,3 +25,42 @@ collections:
       - { label: "摘要（列表頁顯示）", name: "excerpt", widget: "text" }
       - { label: "內文", name: "body", widget: "markdown" }
       - { label: "是否顯示", name: "published", widget: "boolean", default: true }
+
+  - name: "facilities"
+    label: "場館介紹"
+    folder: "_facilities"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{name}}"
+    fields:
+      - { label: "場館名稱", name: "name", widget: "string" }
+      - { label: "英文副標", name: "subtitle", widget: "string" }
+      - { label: "場館圖片", name: "image", widget: "image" }
+      - { label: "簡介說明", name: "description", widget: "text" }
+      - label: "狀態"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "開放中", value: "open" }
+          - { label: "即將開放 (Coming Soon)", value: "coming_soon" }
+      - { label: "排序", name: "order", widget: "number", default: 1 }
+      - { label: "是否顯示", name: "published", widget: "boolean", default: true }
+
+  - name: "courses"
+    label: "專業課程"
+    folder: "_courses"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{category}} — {{name}}"
+    fields:
+      - { label: "課程名稱", name: "name", widget: "string" }
+      - { label: "英文名稱", name: "name_en", widget: "string" }
+      - label: "課程類別"
+        name: "category"
+        widget: "select"
+        options: ["心肺燃脂類", "肌力與雕塑類", "身心靈與舒緩", "高強度與爆發力", "全齡健體課程", "高爾夫專屬訓練"]
+      - { label: "強度標籤", name: "level", widget: "string", hint: "例如：高強度、基礎入門、核心控制" }
+      - { label: "課程圖片", name: "image", widget: "image" }
+      - { label: "課程說明", name: "description", widget: "text" }
+      - { label: "排序", name: "order", widget: "number", default: 1 }
+      - { label: "是否顯示", name: "published", widget: "boolean", default: true }
