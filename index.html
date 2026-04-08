@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
@@ -703,54 +704,19 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <article class="bg-white rounded-3xl shadow-sm border border-[#E8DFD5] overflow-hidden group hover-glow-card stagger-item delay-200 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row cursor-pointer" onclick="navigateTo('news-detail-1')">
-        <div class="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-          <img src="https://yourimageshare.com/ib/6XzCHh2gsd.jpg" alt="News Image" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-          <div class="absolute top-4 left-4 bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">HOT NEWS</div>
-        </div>
-        <div class="md:w-1/2 p-6 md:p-10 lg:p-12 flex flex-col justify-center bg-[#FDFBF7]">
-          <span class="text-[#A66E38] font-bold text-sm tracking-widest mb-3">2026.04.01</span>
-          <h3 class="text-2xl md:text-3xl font-bold text-[#3E2D20] mb-4 group-hover:text-[#A66E38] transition-colors">力羽健身 ALPHA 旗艦館即將盛大試營運！首波創始會員限量招募</h3>
-          <p class="text-[#7A6352] leading-relaxed mb-8 flex-grow">耗資千萬打造，安南區最頂級的全方位運動空間即將與您見面。即日起開放首波「創始會員」限量 500 名預售登記...</p>
-          <div class="flex items-center text-[#A66E38] font-bold text-sm group-hover:translate-x-2 transition-transform">
-            閱讀全文 <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-          </div>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl shadow-sm border border-[#E8DFD5] overflow-hidden group hover-glow-card stagger-item delay-300 flex flex-col cursor-pointer" onclick="navigateTo('news-detail-2')">
-        <div class="h-56 relative overflow-hidden">
-          <img src="https://yourimageshare.com/ib/dboi2GAbtJ.jpg" alt="News Image" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
-          <div class="absolute top-4 left-4 bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">場館快訊</div>
-        </div>
-        <div class="p-6 md:p-8 flex flex-col flex-grow bg-[#FDFBF7]">
-          <span class="text-[#9C8777] font-medium text-xs tracking-widest mb-2">2026.03.10</span>
-          <h3 class="text-xl font-bold text-[#3E2D20] mb-3 group-hover:text-[#A66E38] transition-colors line-clamp-2">頂級智能室內高爾夫模擬器設備安裝完成，打造無死角揮桿體驗</h3>
-          <p class="text-[#7A6352] text-sm leading-relaxed mb-6 flex-grow line-clamp-3">無論晴雨，都能享受揮桿樂趣！我們引進國際頂尖的高爾夫模擬系統，為 V.I.P 會員提供精準的擊球分析與虛擬下場體驗。</p>
-          <div class="flex items-center text-[#A66E38] font-bold text-xs">閱讀全文 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></div>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl shadow-sm border border-[#E8DFD5] overflow-hidden group hover-glow-card stagger-item delay-400 flex flex-col cursor-pointer" onclick="navigateTo('news-detail-3')">
-        <div class="h-56 relative overflow-hidden bg-[#E8DFD5] flex items-center justify-center">
-          <img src="https://yourimageshare.com/ib/NQDxdXT1xO.png" alt="News Image" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out opacity-90 mix-blend-multiply" />
-          <div class="absolute top-4 left-4 bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">企劃活動</div>
-        </div>
-        <div class="p-6 md:p-8 flex flex-col flex-grow z-10 bg-[#FDFBF7]">
-          <span class="text-[#9C8777] font-medium text-xs tracking-widest mb-2">2026.03.01</span>
-          <h3 class="text-xl font-bold text-[#3E2D20] mb-3 group-hover:text-[#A66E38] transition-colors line-clamp-2">凝聚向心力！專屬「企業或社區運動日與運動會」正式開放報名</h3>
-          <p class="text-[#7A6352] text-sm leading-relaxed mb-6 flex-grow line-clamp-3">透過團隊合作與趣味競賽，為您的企業或社區凝聚向心力並激發健康活力！歡迎福委會與社區管委會洽詢專屬客製化方案。</p>
-          <div class="flex items-center text-[#A66E38] font-bold text-xs">閱讀全文 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></div>
-        </div>
-      </article>
+    <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 動態載入消息卡片 -->
+      <div class="md:col-span-2 lg:col-span-3 flex items-center justify-center py-12">
+        <div class="text-[#9C8777]">載入中...</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="news-detail-1" class="page-section page-enter bg-[#FDFBF7] min-h-screen pb-20">
-  <div class="relative w-full h-[40vh] md:h-[55vh] overflow-hidden hardware-accelerate">
-    <img src="https://yourimageshare.com/ib/6XzCHh2gsd.jpg" alt="News Hero" class="absolute inset-0 w-full h-full object-cover animate-bg-zoom" />
+<!-- 動態消息內頁 -->
+<section id="news-detail-dynamic" class="page-section page-enter bg-[#FDFBF7] min-h-screen pb-20">
+  <div id="news-detail-hero" class="relative w-full h-[40vh] md:h-[55vh] overflow-hidden hardware-accelerate">
+    <img id="news-detail-img" src="" alt="News Hero" class="absolute inset-0 w-full h-full object-cover animate-bg-zoom" />
     <div class="absolute inset-0 bg-gradient-to-t from-[#2A2118] via-[#2A2118]/60 to-transparent"></div>
     <div class="absolute top-6 left-4 sm:top-10 sm:left-10 z-20">
       <button onclick="navigateTo('news')" class="flex items-center text-white/80 hover:text-white bg-black/20 hover:bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-all text-sm font-bold border border-white/10 group">
@@ -758,17 +724,14 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
       </button>
     </div>
     <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 z-10 max-w-4xl mx-auto right-0">
-      <div class="flex items-center gap-3 mb-4 stagger-item delay-100">
-        <span class="bg-white/90 text-[#3E2D20] text-xs font-bold px-3 py-1 rounded shadow-sm">HOT NEWS</span>
-        <span class="text-white/80 font-medium tracking-widest text-sm">2026.04.01</span>
+      <div class="flex items-center gap-3 mb-4">
+        <span id="news-detail-tag" class="bg-white/90 text-[#3E2D20] text-xs font-bold px-3 py-1 rounded shadow-sm"></span>
+        <span id="news-detail-date" class="text-white/80 font-medium tracking-widest text-sm"></span>
       </div>
-      <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight stagger-item delay-200 drop-shadow-md">
-        力羽健身 ALPHA 旗艦館<br class="hidden sm:block">即將盛大試營運！首波創始會員限量招募
-      </h1>
+      <h1 id="news-detail-title" class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md"></h1>
     </div>
   </div>
-
-  <div class="max-w-3xl mx-auto px-6 sm:px-8 mt-10 md:mt-12 stagger-item delay-300">
+  <div class="max-w-3xl mx-auto px-6 sm:px-8 mt-10 md:mt-12">
     <div class="flex items-center gap-4 mb-8 md:mb-10 pb-6 border-b border-[#E8DFD5]">
       <span class="text-[#9C8777] text-sm font-bold">分享這則消息：</span>
       <button onclick="copyPageUrl(this)" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E8DFD5] text-[#7A6352] text-sm font-bold hover:bg-[#A66E38] hover:text-white hover:border-[#A66E38] transition-all duration-300 shadow-sm active:scale-95">
@@ -776,145 +739,7 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
         <span class="copy-text">複製連結</span>
       </button>
     </div>
-
-    <article class="article-content">
-      <p class="drop-cap">歷</p>
-      <p>經數百個日夜的精心籌備與無數次的細節打磨，位於台南市安南區的「力羽健身 ALPHA」旗艦館，終於要在即將到來的 4 月迎來盛大試營運。這不僅是一座場館的落成，更是我們對於「讓運動成為一輩子的力量」這份承諾的具體實踐。</p>
-      <h3>斥資千萬，打造五大頂級運動空間</h3>
-      <p>為了徹底打破大眾對健身房擁擠、壓迫的刻板印象，力羽 ALPHA 旗艦館全館採用高規格的空氣淨化與智能照明系統。我們精心規劃了五大主題區域：</p>
-      <ul>
-        <li><strong class="font-bold text-[#A66E38]">專業健身重訓區：</strong>全區引進國際頂級商用器材，包含人體工學軌跡最佳化的機械式設備，以及寬敞的自由重量區。</li>
-        <li><strong class="font-bold text-[#A66E38]">皮拉提斯與團課教室：</strong>採用溫暖木質調與大面採光的靜謐空間，提供瑜伽、有氧與高階器械皮拉提斯課程。</li>
-        <li><strong class="font-bold text-[#A66E38]">室外匹克球場：</strong>配備專業級鋪面與優良照明，讓揮拍的每一刻都享受國際賽事級的體驗。</li>
-        <li><strong class="font-bold text-[#A66E38]">智能室內高爾夫：</strong>無論晴雨，精準的高爾夫模擬器都能讓您隨時下場，享受揮桿快感。</li>
-        <li><strong class="font-bold text-[#A66E38]">V.I.P 專屬私教區：</strong>為需要高度隱私的會員打造，不受外界打擾，專注於個人體態的雕塑與修復。</li>
-      </ul>
-      <blockquote class="bg-white p-6 md:p-8 rounded-2xl border-l-4 border-[#A66E38] shadow-sm my-10 text-[#3E2D20] text-lg font-bold italic">
-        「我們提供的不只是冰冷的器材，而是一個讓你捨不得離開、每天都想回來流汗的第三空間。」—— 力羽創辦人
-      </blockquote>
-      <h3>首波創始會員，釋出史無前例優惠</h3>
-      <p>為了感謝一路以來期待著力羽誕生的朋友們，我們特別在試營運期間釋出 <strong class="font-bold text-[#A66E38]">500 名「創始會員」</strong>專屬資格。這將是力羽有史以來、也是未來絕無僅有的最高優惠：</p>
-      <ul>
-        <li><strong class="font-bold text-[#A66E38]">免入會費：</strong>現省千元手續費用。</li>
-        <li><strong class="font-bold text-[#A66E38]">終身保固月費：</strong>創始會員將享有每月低於 $999 的史詩級價格，且承諾會籍存續期間絕不漲價。</li>
-        <li><strong class="font-bold text-[#A66E38]">專屬入會禮：</strong>完成登記並成功入會者，加贈力羽品牌高質感運動毛巾與專業體能檢測乙次。</li>
-      </ul>
-      <p>名額有限，額滿將立即恢復原價. 誠摯邀請您，給自己一個無痛起步的機會，與我們一起在力羽 ALPHA 遇見更好的自己！</p>
-    </article>
-
-    <div class="mt-12 text-center border-t border-[#E8DFD5] pt-8">
-      <button onclick="navigateTo('news')" class="inline-flex items-center text-[#A66E38] font-bold hover:text-[#8C4A28] transition-colors group">
-        <i data-lucide="arrow-left" class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform"></i> 返回消息列表
-      </button>
-    </div>
-  </div>
-</section>
-
-<section id="news-detail-2" class="page-section page-enter bg-[#FDFBF7] min-h-screen pb-20">
-  <div class="relative w-full h-[40vh] md:h-[55vh] overflow-hidden hardware-accelerate">
-    <img src="https://yourimageshare.com/ib/dboi2GAbtJ.jpg" alt="News Hero" class="absolute inset-0 w-full h-full object-cover animate-bg-zoom" />
-    <div class="absolute inset-0 bg-gradient-to-t from-[#2A2118] via-[#2A2118]/60 to-transparent"></div>
-    <div class="absolute top-6 left-4 sm:top-10 sm:left-10 z-20">
-      <button onclick="navigateTo('news')" class="flex items-center text-white/80 hover:text-white bg-black/20 hover:bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-all text-sm font-bold border border-white/10 group">
-        <i data-lucide="arrow-left" class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform"></i> 返回最新消息
-      </button>
-    </div>
-    <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 z-10 max-w-4xl mx-auto right-0">
-      <div class="flex items-center gap-3 mb-4 stagger-item delay-100">
-        <span class="bg-white/90 text-[#3E2D20] text-xs font-bold px-3 py-1 rounded shadow-sm">場館快訊</span>
-        <span class="text-white/80 font-medium tracking-widest text-sm">2026.03.10</span>
-      </div>
-      <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight stagger-item delay-200 drop-shadow-md">
-        頂級智能室內高爾夫模擬器<br class="hidden sm:block">設備安裝完成，打造無死角揮桿體驗
-      </h1>
-    </div>
-  </div>
-
-  <div class="max-w-3xl mx-auto px-6 sm:px-8 mt-10 md:mt-12 stagger-item delay-300">
-    <div class="flex items-center gap-4 mb-8 md:mb-10 pb-6 border-b border-[#E8DFD5]">
-      <span class="text-[#9C8777] text-sm font-bold">分享這則消息：</span>
-      <button onclick="copyPageUrl(this)" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E8DFD5] text-[#7A6352] text-sm font-bold hover:bg-[#A66E38] hover:text-white hover:border-[#A66E38] transition-all duration-300 shadow-sm active:scale-95">
-        <i data-lucide="link-2" class="w-4 h-4"></i>
-        <span class="copy-text">複製連結</span>
-      </button>
-    </div>
-
-    <article class="article-content">
-      <p class="drop-cap">對</p>
-      <p>於熱愛高爾夫的球友來說，台灣多變的氣候（夏季雷陣雨、冬季寒流）往往是練球的最大阻礙. 力羽健身 ALPHA 聽見了商務人士與高爾夫愛好者的需求，我們在旗艦館內重金引進了國際頂規的「智能室內高爾夫模擬系統」，目前所有硬體設備已全數安裝測試完畢！</p>
-      <h3>科技賦能，精準捕捉每一次擊球</h3>
-      <p>我們的室內高爾夫包廂有別於傳統的打擊網，而是採用了搭載超高速攝影機與雷達感測器的頂尖模擬器. 系統能在毫秒之間，精準捕捉您的擊球數據，包括：</p>
-      <ul>
-        <li><strong class="font-bold text-[#A66E38]">桿頭軌跡與速度：</strong>真實還原您下桿的角度與力道.</li>
-        <li><strong class="font-bold text-[#A66E38]">球速與起飛角：</strong>計算出最精確的飛行距離與彈道.</li>
-        <li><strong class="font-bold text-[#A66E38]">球體旋轉速率（Spin Rate）：</strong>精準模擬出 Draw（左曲球）或 Fade（右曲球）的飛行姿態.</li>
-      </ul>
-      <blockquote class="bg-white p-6 md:p-8 rounded-2xl border-l-4 border-[#A66E38] shadow-sm my-10 text-[#3E2D20] text-lg font-bold italic">
-        「在這裡，數據會說話. 透過科學化的影像回放，我們能幫會員更有效率地微調揮桿姿勢，這是傳統練習場難以做到的.」
-      </blockquote>
-      <h3>18 洞虛擬下場，尊榮私密的社交空間</h3>
-      <p>除了專業的數據分析模式，系統內建了全球數十個知名錦標賽球場的 3D 虛擬實境. 您可以與三五好友在舒適的冷氣房內，不受日曬雨淋，隨時來一場 18 洞的友誼賽.</p>
-      <p>為了確保體驗的尊榮感，高爾夫空間採用獨立包廂設計，配備舒適的沙發休息區. 無論是個人精進球技、商務洽談，或是朋友間的私密聚會，這裡都將是您最完美的選擇.</p>
-      <p>力羽 ALPHA 期盼透過高爾夫與專業體能訓練的結合，幫助您在球場上開創更遠的發球距離與更穩定的成績. 場館開放後，歡迎 V.I.P 會員預約體驗.</p>
-    </article>
-
-    <div class="mt-12 text-center border-t border-[#E8DFD5] pt-8">
-      <button onclick="navigateTo('news')" class="inline-flex items-center text-[#A66E38] font-bold hover:text-[#8C4A28] transition-colors group">
-        <i data-lucide="arrow-left" class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform"></i> 返回消息列表
-      </button>
-    </div>
-  </div>
-</section>
-
-<section id="news-detail-3" class="page-section page-enter bg-[#FDFBF7] min-h-screen pb-20">
-  <div class="relative w-full h-[40vh] md:h-[55vh] overflow-hidden hardware-accelerate">
-    <img src="https://yourimageshare.com/ib/NQDxdXT1xO.png" alt="News Hero" class="absolute inset-0 w-full h-full object-cover animate-bg-zoom" />
-    <div class="absolute inset-0 bg-gradient-to-t from-[#2A2118] via-[#2A2118]/60 to-transparent"></div>
-    <div class="absolute top-6 left-4 sm:top-10 sm:left-10 z-20">
-      <button onclick="navigateTo('news')" class="flex items-center text-white/80 hover:text-white bg-black/20 hover:bg-black/40 backdrop-blur-md px-4 py-2 rounded-full transition-all text-sm font-bold border border-white/10 group">
-        <i data-lucide="arrow-left" class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform"></i> 返回最新消息
-      </button>
-    </div>
-    <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 z-10 max-w-4xl mx-auto right-0">
-      <div class="flex items-center gap-3 mb-4 stagger-item delay-100">
-        <span class="bg-white/90 text-[#3E2D20] text-xs font-bold px-3 py-1 rounded shadow-sm">企劃活動</span>
-        <span class="text-white/80 font-medium tracking-widest text-sm">2026.03.01</span>
-      </div>
-      <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight stagger-item delay-200 drop-shadow-md">
-        凝聚向心力！專屬「企業或社區運動日與運動會」<br class="hidden sm:block">正式開放報名
-      </h1>
-    </div>
-  </div>
-
-  <div class="max-w-3xl mx-auto px-6 sm:px-8 mt-10 md:mt-12 stagger-item delay-300">
-    <div class="flex items-center gap-4 mb-8 md:mb-10 pb-6 border-b border-[#E8DFD5]">
-      <span class="text-[#9C8777] text-sm font-bold">分享這則消息：</span>
-      <button onclick="copyPageUrl(this)" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E8DFD5] text-[#7A6352] text-sm font-bold hover:bg-[#A66E38] hover:text-white hover:border-[#A66E38] transition-all duration-300 shadow-sm active:scale-95">
-        <i data-lucide="link-2" class="w-4 h-4"></i>
-        <span class="copy-text">複製連結</span>
-      </button>
-    </div>
-
-    <article class="article-content">
-      <p class="drop-cap">健</p>
-      <p>康活力的團隊與活躍熱情的住戶，是企業與社區最具凝聚力的核心資產. 打破傳統單調的聚餐或靜態講座模式，力羽健身 ALPHA 正式推出專為各大企業與社區量身打造的<strong class="font-bold text-[#A66E38]">「專屬運動日與趣味運動會」</strong>企劃方案！</p>
-      <h3>從一個人流汗，到一群人的歡笑</h3>
-      <p>力羽品牌的起源，正是來自創辦人將自身的健身體悟落實到團隊中，透過一起運動來強化企業 DNA. 我們深知「趣味」與「團隊合作」是讓人愛上運動的最佳催化劑. 現在，我們把這份成功的經驗模組化，帶給更多有需要的團體.</p>
-      <h3>多元彈性的客製化內容</h3>
-      <p>我們的活動企劃團隊與專業教練將為您包辦一切，可依據人數、預算與場地需求進行自由搭配：</p>
-      <ul>
-        <li><strong class="font-bold text-[#A66E38]">趣味闖關競賽：</strong>設計門檻低、互動性高的體能挑戰（如：團體戰繩、拔河、默契傳球等），讓跨部門同事或社區鄰居在歡笑中破冰.</li>
-        <li><strong class="font-bold text-[#A66E38]">主題包班課程：</strong>針對企業日或社區活動，舉辦百人瑜珈舒緩、草皮燃脂派對或熱血拳擊有氧.</li>
-        <li><strong class="font-bold text-[#A66E38]">專業體能挑戰賽：</strong>若團隊具備運動基礎，我們可規劃專業的循環訓練競賽，提供計分系統與獎勵機制，激發榮譽感.</li>
-        <li><strong class="font-bold text-[#A66E38]">場地彈性配合：</strong>可選擇包場力羽 ALPHA 旗艦館內五大運動空間，或由教練團隊前往企業指定之廠區與戶外場地.</li>
-      </ul>
-      <blockquote class="bg-white p-6 md:p-8 rounded-2xl border-l-4 border-[#A66E38] shadow-sm my-10 text-[#3E2D20] text-lg font-bold italic">
-        「投資團隊的健康，就是投資組織的未來. 透過一次熱血的運動會，你會看見平時在辦公室裡看不見的團隊凝聚力.」
-      </blockquote>
-      <h3>誠摯邀請各界福委會洽談</h3>
-      <p>不論是企業家庭日、部門 Team Building，或是社區年度住戶聯歡，把企劃交給力羽，為您的團隊注入滿滿的健康活力！歡迎台南地區各大企業主、人資部門及社區管委會與我們聯繫.</p>
-    </article>
-
+    <article id="news-detail-body" class="article-content"></article>
     <div class="mt-12 text-center border-t border-[#E8DFD5] pt-8">
       <button onclick="navigateTo('news')" class="inline-flex items-center text-[#A66E38] font-bold hover:text-[#8C4A28] transition-colors group">
         <i data-lucide="arrow-left" class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform"></i> 返回消息列表
@@ -1527,7 +1352,7 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
               </div>
               <div>
                 <h4 class="text-[#3E2D20] font-bold text-lg mb-1">電子信箱</h4>
-                <a href="mailto:leeyu04@leeyutw.net" class="text-[#7A6352] hover:text-[#A66E38] transition-colors font-medium break-all">leeyu04@leeyutw.net</a>
+                <a href="/cdn-cgi/l/email-protection#d1bdb4b4a8a4e1e591bdb4b4a8a4a5a6ffbfb4a5" class="text-[#7A6352] hover:text-[#A66E38] transition-colors font-medium break-all"><span class="__cf_email__" data-cfemail="600c050519155054200c0505191514174e0e0514">[email&#160;protected]</span></a>
               </div>
             </li>
           </ul>
@@ -1799,7 +1624,7 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
   </div>
 </a>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 lucide.createIcons();
 document.getElementById('current-year').innerText = new Date().getFullYear();
 
@@ -2176,6 +2001,132 @@ function resetForm(type) {
 }
 
 function handleCorpSubmit(e) { submitToGoogle(e, 'corp', 'corp-success', 'corp-form-container'); }
+
+// =====================================================
+// 📰 動態最新消息載入系統
+// =====================================================
+
+// 簡易 Markdown 轉 HTML 轉換器
+function parseMarkdown(md) {
+  if (!md) return '';
+  return md
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$2</h2>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="font-bold text-[#A66E38]">$1</strong>')
+    .replace(/^> (.+)$/gm, '<blockquote class="bg-white p-6 md:p-8 rounded-2xl border-l-4 border-[#A66E38] shadow-sm my-10 text-[#3E2D20] text-lg font-bold italic">$1</blockquote>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>[\s\S]+?<\/li>)/g, '<ul>$1</ul>')
+    .replace(/<\/ul>\s*<ul>/g, '')
+    .replace(/^(?!<[h|u|b|l])(.*\S.*)$/gm, '<p>$1</p>')
+    .replace(/<p><\/p>/g, '');
+}
+
+// 解析 Markdown Front Matter
+function parseFrontMatter(text) {
+  const match = text.match(/^---\n([\s\S]+?)\n---\n([\s\S]*)$/);
+  if (!match) return { data: {}, content: text };
+  const data = {};
+  match[1].split('\n').forEach(line => {
+    const [key, ...val] = line.split(':');
+    if (key && val.length) {
+      data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, '');
+    }
+  });
+  return { data, content: match[2] };
+}
+
+// 載入新聞列表
+async function loadNews() {
+  const newsFiles = ['news-1', 'news-2', 'news-3'];
+  const articles = [];
+
+  for (const file of newsFiles) {
+    try {
+      const res = await fetch(`/_news/${file}.md`);
+      if (!res.ok) continue;
+      const text = await res.text();
+      const { data, content } = parseFrontMatter(text);
+      if (data.published === 'false' || data.published === false) continue;
+      articles.push({ ...data, content, slug: file });
+    } catch(e) { console.warn('無法載入:', file); }
+  }
+
+  renderNewsGrid(articles);
+}
+
+function renderNewsGrid(articles) {
+  const grid = document.getElementById('news-grid');
+  if (!articles.length) {
+    grid.innerHTML = '<div class="md:col-span-2 lg:col-span-3 text-center py-12 text-[#9C8777]">目前暫無消息</div>';
+    return;
+  }
+
+  grid.innerHTML = articles.map((a, i) => {
+    if (i === 0) {
+      return `<article class="bg-white rounded-3xl shadow-sm border border-[#E8DFD5] overflow-hidden group hover-glow-card stagger-item delay-200 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row cursor-pointer" onclick="openNewsDetail('${a.slug}')">
+        <div class="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+          <img src="${a.image}" alt="News Image" loading="lazy" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+          <div class="absolute top-4 left-4 bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">${a.tag}</div>
+        </div>
+        <div class="md:w-1/2 p-6 md:p-10 lg:p-12 flex flex-col justify-center bg-[#FDFBF7]">
+          <span class="text-[#A66E38] font-bold text-sm tracking-widest mb-3">${a.date}</span>
+          <h3 class="text-2xl md:text-3xl font-bold text-[#3E2D20] mb-4 group-hover:text-[#A66E38] transition-colors">${a.title}</h3>
+          <p class="text-[#7A6352] leading-relaxed mb-8 flex-grow">${a.excerpt}</p>
+          <div class="flex items-center text-[#A66E38] font-bold text-sm group-hover:translate-x-2 transition-transform">閱讀全文 <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></div>
+        </div>
+      </article>`;
+    } else {
+      return `<article class="bg-white rounded-3xl shadow-sm border border-[#E8DFD5] overflow-hidden group hover-glow-card stagger-item delay-${i === 1 ? '300' : '400'} flex flex-col cursor-pointer" onclick="openNewsDetail('${a.slug}')">
+        <div class="h-56 relative overflow-hidden">
+          <img src="${a.image}" alt="News Image" loading="lazy" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+          <div class="absolute top-4 left-4 bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">${a.tag}</div>
+        </div>
+        <div class="p-6 md:p-8 flex flex-col flex-grow bg-[#FDFBF7]">
+          <span class="text-[#9C8777] font-medium text-xs tracking-widest mb-2">${a.date}</span>
+          <h3 class="text-xl font-bold text-[#3E2D20] mb-3 group-hover:text-[#A66E38] transition-colors line-clamp-2">${a.title}</h3>
+          <p class="text-[#7A6352] text-sm leading-relaxed mb-6 flex-grow line-clamp-3">${a.excerpt}</p>
+          <div class="flex items-center text-[#A66E38] font-bold text-xs">閱讀全文 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></div>
+        </div>
+      </article>`;
+    }
+  }).join('');
+
+  lucide.createIcons();
+}
+
+async function openNewsDetail(slug) {
+  try {
+    const res = await fetch(`/_news/${slug}.md`);
+    const text = await res.text();
+    const { data, content } = parseFrontMatter(text);
+
+    document.getElementById('news-detail-img').src = data.image || '';
+    document.getElementById('news-detail-tag').textContent = data.tag || '';
+    document.getElementById('news-detail-date').textContent = data.date || '';
+    document.getElementById('news-detail-title').textContent = data.title || '';
+    document.getElementById('news-detail-body').innerHTML = parseMarkdown(content);
+
+    navigateTo('news-detail-dynamic');
+    lucide.createIcons();
+  } catch(e) {
+    console.error('無法載入文章', e);
+  }
+}
+
+// 頁面載入時執行
+loadNews();
+
+// Netlify Identity 登入後自動跳轉後台
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on('init', user => {
+    if (!user) {
+      window.netlifyIdentity.on('login', () => {
+        document.location.href = '/admin/';
+      });
+    }
+  });
+}
+
 function handleContactSubmit(e) { submitToGoogle(e, 'contact', 'contact-success', 'contact-form-container'); }
 function handlePresaleSubmit(e) { submitToGoogle(e, 'presale', 'presale-success', 'presale-form-container'); }
 </script>
