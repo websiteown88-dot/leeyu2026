@@ -46,7 +46,7 @@ collections:
       - { label: "排序", name: "order", widget: "number", default: 1 }
       - { label: "是否顯示", name: "published", widget: "boolean", default: true }
 
-  - name: "courses"
+ - name: "courses"
     label: "專業課程"
     folder: "_courses"
     create: true
@@ -62,5 +62,12 @@ collections:
       - { label: "強度標籤", name: "level", widget: "string", hint: "例如：高強度、基礎入門、核心控制" }
       - { label: "課程圖片", name: "image", widget: "image" }
       - { label: "課程說明", name: "description", widget: "text" }
+      
+      # ====== 新增的類別動態欄位 ======
+      - { label: "【類別設定】英文副標", name: "category_en", widget: "string", required: false, hint: "例如：CARDIO & FAT BURNING (同類別只需在其中一堂課填寫即可)" }
+      - { label: "【類別設定】類別說明", name: "category_desc", widget: "text", required: false, hint: "該類別的詳細介紹 (同類別只需在其中一堂課填寫即可)" }
+      - { label: "【類別設定】類別標籤", name: "category_tags", widget: "string", required: false, hint: "請用半形逗號分隔，例如：爆汗燃脂,心肺強化,釋放壓力" }
+      # ================================
+
       - { label: "排序", name: "order", widget: "number", default: 1 }
       - { label: "是否顯示", name: "published", widget: "boolean", default: true }
