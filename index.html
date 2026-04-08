@@ -348,49 +348,8 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
         </button>
       </div>
 
-      <ul class="flex flex-col">
-        <li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item delay-200 rounded-xl px-4 -mx-4">
-          <a href="#" onclick="navigateTo('news-detail-1'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
-            <div class="flex items-center gap-4 sm:w-1/4">
-              <span class="text-[#A66E38] font-bold tracking-widest text-sm md:text-base">2026.04.01</span>
-              <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">HOT</span>
-            </div>
-            <div class="sm:w-2/4">
-              <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">力羽健身 ALPHA 旗艦館即將盛大試營運！</h3>
-            </div>
-            <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
-              <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-            </div>
-          </a>
-        </li>
-        <li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item delay-300 rounded-xl px-4 -mx-4">
-          <a href="#" onclick="navigateTo('news-detail-2'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
-            <div class="flex items-center gap-4 sm:w-1/4">
-              <span class="text-[#9C8777] font-bold tracking-widest text-sm md:text-base group-hover:text-[#A66E38] transition-colors">2026.03.10</span>
-              <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">場館</span>
-            </div>
-            <div class="sm:w-2/4">
-              <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">智能室內高爾夫模擬器，設備安裝完成</h3>
-            </div>
-            <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
-              <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-            </div>
-          </a>
-        </li>
-        <li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item delay-400 rounded-xl px-4 -mx-4">
-          <a href="#" onclick="navigateTo('news-detail-3'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
-            <div class="flex items-center gap-4 sm:w-1/4">
-              <span class="text-[#9C8777] font-bold tracking-widest text-sm md:text-base group-hover:text-[#A66E38] transition-colors">2026.03.01</span>
-              <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">企劃</span>
-            </div>
-            <div class="sm:w-2/4">
-              <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">專屬「企業或社區運動日與運動會」開放報名</h3>
-            </div>
-            <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
-              <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-            </div>
-          </a>
-        </li>
+      <ul id="home-news-list" class="flex flex-col">
+        <li class="text-[#9C8777] py-4 text-center">載入中...</li>
       </ul>
       <div class="mt-8 text-center sm:hidden stagger-item delay-500">
          <button onclick="navigateTo('news')" class="text-[#A66E38] font-bold text-sm border border-[#A66E38] px-6 py-2.5 rounded-full hover:bg-[#A66E38] hover:text-white transition-colors w-full">
@@ -2052,7 +2011,35 @@ async function loadNews() {
   }
 
   renderNewsGrid(articles);
+  renderHomeNewsList(articles);
 }
+
+function renderHomeNewsList(articles) {
+  const list = document.getElementById('home-news-list');
+  if (!list) return;
+  if (!articles.length) {
+    list.innerHTML = '<li class="text-[#9C8777] py-4 text-center">目前暫無消息</li>';
+    return;
+  }
+  const delays = ['delay-200', 'delay-300', 'delay-400'];
+  list.innerHTML = articles.map((a, i) => {
+    const shortTag = a.tag === 'HOT NEWS' ? 'HOT' : a.tag.replace('快訊','').replace('活動','').replace('消息','').replace('優惠','');
+    return `<li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item ${delays[i]||''} rounded-xl px-4 -mx-4">
+      <a href="#" onclick="openNewsDetail('${a.slug}'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
+        <div class="flex items-center gap-4 sm:w-1/4">
+          <span class="text-[#A66E38] font-bold tracking-widest text-sm md:text-base">${a.date}</span>
+          <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">${shortTag}</span>
+        </div>
+        <div class="sm:w-2/4">
+          <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">${a.title}</h3>
+        </div>
+        <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
+          <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
+        </div>
+      </a>
+    </li>`;
+  }).join('');
+  lucide.createIcons();
 
 function renderNewsGrid(articles) {
   const grid = document.getElementById('news-grid');
