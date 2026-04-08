@@ -1652,16 +1652,18 @@ function renderCourses(items) {
     if (!categories[c.category]) {
       categories[c.category] = {
         courses: [],
-        // 從 CMS 抓取的欄位，如果沒有填寫則給預設空值
-        enTitle: c.category_en || '',
-        desc: c.category_desc || '',
-        // 標籤假設在後台是用逗號分隔，例如 "爆汗燃脂,心肺強化"
-        tags: c.category_tags ? c.category_tags.split(',').map(t => t.trim()) : []
+        enTitle: '',
+        desc: '',
+        tags: []
       };
     }
     categories[c.category].courses.push(c);
-  });
 
+    // 只要這堂課有填寫類別資訊，就把它存起來（這樣不用每堂課都填）
+    if (c.category_en) categories[c.category].enTitle = c.category_en;
+    if (c.category_desc) categories[c.category].desc = c.category_desc;
+    if (c.category_tags) categories[c.category].tags = c.category_tags.split(',').map(t => t.trim());
+  });
   const categoryColors = {
     '心肺燃脂類': { bg: 'bg-gradient-to-br from-[#D4A373] to-[#A66E38]', text: 'text-[#A66E38]', border: 'border-[#A66E38]', icon: 'flame' },
     '肌力與雕塑類': { bg: 'bg-gradient-to-br from-[#8C4A28] to-[#A66E38]', text: 'text-[#8C4A28]', border: 'border-[#8C4A28]', icon: 'dumbbell' },
