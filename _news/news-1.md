@@ -1,9 +1,9 @@
 ---
-title: "力羽健身 ALPHA 旗艦館即將盛大試營運！首波創始會員限量招募"
-date: "2026.04.01"
-tag: "HOT NEWS"
-image: "https://yourimageshare.com/ib/6XzCHh2gsd.jpg"
-excerpt: "耗資千萬打造，安南區最頂級的全方位運動空間即將與您見面。即日起開放首波「創始會員」限量 500 名預售登記..."
+title: 力羽健身 ALPHA 旗艦館即將盛大試營運！首波創始會員限量招募
+date: 2026.04.01
+tag: HOT NEWS
+image: /images/uploads/gemini_generated_image_9v24wo9v24wo9v24.png
+excerpt: 耗資千萬打造，安南區最頂級的全方位運動空間即將與您見面。即日起開放首波「創始會員」限量 500 名預售登記...
 published: true
 ---
 
