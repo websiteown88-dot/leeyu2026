@@ -46,7 +46,7 @@ collections:
       - { label: "排序", name: "order", widget: "number", default: 1 }
       - { label: "是否顯示", name: "published", widget: "boolean", default: true }
 
- - name: "courses"
+  - name: "courses"
     label: "專業課程"
     folder: "_courses"
     create: true
