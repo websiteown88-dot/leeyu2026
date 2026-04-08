@@ -852,6 +852,7 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
 
 <section id="courses" class="page-section page-enter py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
     <div class="text-center mb-16 md:mb-24 stagger-item delay-100">
       <h2 class="text-sm font-bold tracking-widest text-[#9C8777] uppercase mb-2">Programs & Classes</h2>
       <h1 class="text-3xl md:text-5xl font-black text-[#3E2D20] premium-title-anim">專業課程介紹</h1>
@@ -860,11 +861,9 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
         告別枯燥乏味的單一訓練！我們將專業系統化，搭配頂尖師資，從爆汗燃脂到長輩防跌，滿足全齡的健康需求.
       </p>
     </div>
-    <div id="courses-container" class="space-y-16">
-      <div class="flex items-center justify-center py-12">
-        <div class="text-[#9C8777]">載入中...</div>
-      </div>
-    </div>
+
+    <div id="courses-dynamic-container"></div>
+
   </div>
 </section>
 
@@ -1647,30 +1646,55 @@ function renderCourses(items) {
     return;
   }
 
-  // 依類別分組
+  // 依類別分組，並提取類別的動態資訊
   const categories = {};
   items.forEach(c => {
-    if (!categories[c.category]) categories[c.category] = [];
-    categories[c.category].push(c);
+    if (!categories[c.category]) {
+      categories[c.category] = {
+        courses: [],
+        // 從 CMS 抓取的欄位，如果沒有填寫則給預設空值
+        enTitle: c.category_en || '',
+        desc: c.category_desc || '',
+        // 標籤假設在後台是用逗號分隔，例如 "爆汗燃脂,心肺強化"
+        tags: c.category_tags ? c.category_tags.split(',').map(t => t.trim()) : []
+      };
+    }
+    categories[c.category].courses.push(c);
   });
 
   const categoryColors = {
-    '心肺燃脂類': { bg: 'bg-gradient-to-br from-[#D4A373] to-[#A66E38]', text: 'text-[#A66E38]', border: 'border-[#A66E38]' },
-    '肌力與雕塑類': { bg: 'bg-gradient-to-br from-[#8C4A28] to-[#A66E38]', text: 'text-[#8C4A28]', border: 'border-[#8C4A28]' },
-    '身心靈與舒緩': { bg: 'bg-white border border-[#E8DFD5]', text: 'text-[#D4A373]', border: 'border-[#D4A373]' },
-    '高強度與爆發力': { bg: 'bg-gradient-to-br from-[#3E2D20] to-[#2A2118]', text: 'text-[#3E2D20]', border: 'border-[#3E2D20]' },
-    '全齡健體課程': { bg: 'bg-white border border-[#E8DFD5]', text: 'text-[#A66E38]', border: 'border-[#9C8777]' },
-    '高爾夫專屬訓練': { bg: 'bg-white border border-[#E8DFD5]', text: 'text-[#A66E38]', border: 'border-[#9C8777]' },
+    '心肺燃脂類': { bg: 'bg-gradient-to-br from-[#D4A373] to-[#A66E38]', text: 'text-[#A66E38]', border: 'border-[#A66E38]', icon: 'flame' },
+    '肌力與雕塑類': { bg: 'bg-gradient-to-br from-[#8C4A28] to-[#A66E38]', text: 'text-[#8C4A28]', border: 'border-[#8C4A28]', icon: 'dumbbell' },
+    '身心靈與舒緩': { bg: 'bg-white border border-[#E8DFD5]', text: 'text-[#D4A373]', border: 'border-[#D4A373]', icon: 'flower-2' },
+    '高強度與爆發力': { bg: 'bg-gradient-to-br from-[#3E2D20] to-[#2A2118]', text: 'text-[#3E2D20]', border: 'border-[#3E2D20]', icon: 'zap' },
+    '全齡健體課程': { bg: 'bg-white border border-[#E8DFD5]', text: 'text-[#A66E38]', border: 'border-[#9C8777]', icon: 'users' },
+    '高爾夫專屬訓練': { bg: 'bg-white border border-[#E8DFD5]', text: 'text-[#A66E38]', border: 'border-[#9C8777]', icon: 'flag' },
   };
 
-  container.innerHTML = Object.entries(categories).map(([cat, courses]) => {
-    const color = categoryColors[cat] || { bg: 'bg-[#A66E38]', text: 'text-[#A66E38]', border: 'border-[#A66E38]' };
+  container.innerHTML = Object.entries(categories).map(([cat, data]) => {
+    const courses = data.courses;
+    const color = categoryColors[cat] || { bg: 'bg-[#A66E38]', text: 'text-[#A66E38]', border: 'border-[#A66E38]', icon: 'dumbbell' };
+    
+    // 動態生成標籤 HTML
+    const tagsHtml = data.tags.length > 0 
+      ? `<div class="flex flex-wrap gap-2 mb-6 mt-4">` + data.tags.map(tag => `<span class="bg-[#F5EFE6] text-[#A66E38] px-3 py-1 rounded-full text-xs font-bold border border-[#E8DFD5]">#${tag}</span>`).join('') + `</div>`
+      : '';
+
+    // 動態生成英文標題與說明 HTML
+    const enTitleHtml = data.enTitle ? `<span class="text-[#A66E38] font-bold tracking-widest text-sm uppercase block mb-4 mt-2">${data.enTitle}</span>` : '';
+    const descHtml = data.desc ? `<p class="text-[#7A6352] text-lg leading-relaxed mb-6 mt-2">${data.desc}</p>` : '';
+
     return `<div class="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-start scroll-reveal">
       <div class="lg:w-1/3 lg:sticky lg:top-32 reveal-element">
         <div class="inline-flex items-center justify-center p-4 ${color.bg} rounded-2xl ${color.text} mb-6 shadow-md">
-          <i data-lucide="dumbbell" class="w-8 h-8"></i>
+          <i data-lucide="${color.icon || 'dumbbell'}" class="w-8 h-8"></i>
         </div>
         <h3 class="text-3xl md:text-4xl font-black text-[#3E2D20] mb-2">${cat}</h3>
+        
+        ${enTitleHtml}
+        ${descHtml}
+        ${tagsHtml}
+        
         <div class="border-l-4 ${color.border} bg-[#FDFBF7] p-4 rounded-r-xl shadow-sm border-t border-r border-b border-[#E8DFD5] mt-4">
           <p class="text-[#3E2D20] text-sm font-bold">共 ${courses.length} 堂課程</p>
         </div>
