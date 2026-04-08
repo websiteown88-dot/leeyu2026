@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'zh_Hant'
+
+collections:
+  - name: "news"
+    label: "最新消息"
+    folder: "_news"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "標題", name: "title", widget: "string" }
+      - { label: "日期", name: "date", widget: "date", format: "YYYY.MM.DD" }
+      - label: "分類標籤"
+        name: "tag"
+        widget: "select"
+        options: ["HOT NEWS", "場館快訊", "企劃活動", "會員優惠", "課程消息"]
+      - { label: "封面圖片", name: "image", widget: "image" }
+      - { label: "摘要（列表頁顯示）", name: "excerpt", widget: "text" }
+      - { label: "內文", name: "body", widget: "markdown" }
+      - { label: "是否顯示", name: "published", widget: "boolean", default: true }
