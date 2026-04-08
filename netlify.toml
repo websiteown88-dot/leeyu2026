@@ -1,0 +1,5 @@
+[[headers]]
+  for = "/_news/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "text/plain; charset=utf-8"

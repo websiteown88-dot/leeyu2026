@@ -337,8 +337,8 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
   </div>
 
   <div class="bg-[#FDFBF7] pt-16 pb-8 md:pt-24 md:pb-12 relative z-20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-end mb-6 md:mb-8 border-b-2 border-[#E8DFD5] pb-4 stagger-item delay-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-end mb-10 border-b-2 border-[#E8DFD5] pb-4 stagger-item delay-100">
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold text-[#3E2D20] tracking-tight">最新消息</h2>
           <p class="text-[#A66E38] font-bold tracking-widest uppercase mt-2 text-xs md:text-sm">Latest News</p>
@@ -347,55 +347,15 @@ h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-b
           查看全部消息 <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
         </button>
       </div>
-
-     <ul class="flex flex-col">
-  <li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item delay-200 rounded-xl px-4 -mx-4">
-    <a href="#" onclick="openNewsDetail('news-1'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
-      <div class="flex items-center gap-4 sm:w-1/4">
-        <span class="text-[#A66E38] font-bold tracking-widest text-sm md:text-base">2026.04.01</span>
-        <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">HOT</span>
+      <div id="home-news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="md:col-span-2 lg:col-span-3 flex items-center justify-center py-12">
+          <div class="text-[#9C8777]">載入中...</div>
+        </div>
       </div>
-      <div class="sm:w-2/4">
-        <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">力羽健身 ALPHA 旗艦館即將盛大試營運！</h3>
-      </div>
-      <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
-        <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-      </div>
-    </a>
-  </li>
-  <li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item delay-300 rounded-xl px-4 -mx-4">
-    <a href="#" onclick="openNewsDetail('news-2'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
-      <div class="flex items-center gap-4 sm:w-1/4">
-        <span class="text-[#9C8777] font-bold tracking-widest text-sm md:text-base group-hover:text-[#A66E38] transition-colors">2026.03.10</span>
-        <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">場館</span>
-      </div>
-      <div class="sm:w-2/4">
-        <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">智能室內高爾夫模擬器，設備安裝完成</h3>
-      </div>
-      <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
-        <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-      </div>
-    </a>
-  </li>
-  <li class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 stagger-item delay-400 rounded-xl px-4 -mx-4">
-    <a href="#" onclick="openNewsDetail('news-3'); return false;" class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6 cursor-pointer">
-      <div class="flex items-center gap-4 sm:w-1/4">
-        <span class="text-[#9C8777] font-bold tracking-widest text-sm md:text-base group-hover:text-[#A66E38] transition-colors">2026.03.01</span>
-        <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">企劃</span>
-      </div>
-      <div class="sm:w-2/4">
-        <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">專屬「企業或社區運動日與運動會」開放報名</h3>
-      </div>
-      <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
-        <i data-lucide="arrow-up-right" class="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-      </div>
-    </a>
-  </li>
-</ul>
       <div class="mt-8 text-center sm:hidden stagger-item delay-500">
-         <button onclick="navigateTo('news')" class="text-[#A66E38] font-bold text-sm border border-[#A66E38] px-6 py-2.5 rounded-full hover:bg-[#A66E38] hover:text-white transition-colors w-full">
-         查看全部消息
-         </button>
+        <button onclick="navigateTo('news')" class="text-[#A66E38] font-bold text-sm border border-[#A66E38] px-6 py-2.5 rounded-full hover:bg-[#A66E38] hover:text-white transition-colors w-full">
+          查看全部消息
+        </button>
       </div>
     </div>
   </div>
@@ -2039,7 +1999,6 @@ function parseFrontMatter(text) {
 async function loadNews() {
   const newsFiles = ['news-1', 'news-2', 'news-3'];
   const articles = [];
-
   for (const file of newsFiles) {
     try {
       const res = await fetch(`/_news/${file}.md`);
@@ -2050,12 +2009,55 @@ async function loadNews() {
       articles.push({ ...data, content, slug: file });
     } catch(e) { console.warn('無法載入:', file); }
   }
-
   renderNewsGrid(articles);
+  renderNewsGrid(articles, 'home-news-grid');
 }
 
-function renderNewsGrid(articles) {
-  const grid = document.getElementById('news-grid');
+function renderHomeNewsList(articles) {
+  const list = document.getElementById('home-news-list');
+  if (!list || !articles.length) return;
+  const delays = ['delay-200', 'delay-300', 'delay-400'];
+  list.innerHTML = articles.map((a, i) => {
+    const shortTag = a.tag === 'HOT NEWS' ? 'HOT' : a.tag.replace('快訊','').replace('活動','').replace('消息','').replace('優惠','');
+    return `<li onclick="openNewsDetail('${a.slug}')" style="cursor:pointer;" class="group border-b border-[#F0E8DE] hover:bg-[#F5EFE6] transition-colors duration-300 ${delays[i]||''} rounded-xl px-4 -mx-4">
+      <div class="flex flex-col sm:flex-row sm:items-center py-5 md:py-6 gap-2 md:gap-6">
+        <div class="flex items-center gap-4 sm:w-1/4">
+          <span class="text-[#A66E38] font-bold tracking-widest text-sm md:text-base">${a.date}</span>
+          <span class="bg-white/90 text-[#3E2D20] border border-[#E8DFD5] text-[10px] px-2 py-0.5 rounded font-bold shadow-sm">${shortTag}</span>
+        </div>
+        <div class="sm:w-2/4">
+          <h3 class="text-lg font-bold text-[#3E2D20] group-hover:text-[#A66E38] transition-colors duration-300">${a.title}</h3>
+        </div>
+        <div class="sm:w-1/4 hidden sm:flex justify-end text-[#D4A373] group-hover:text-[#A66E38] transition-colors duration-300">
+          <span style="font-size:1.3rem;">↗</span>
+        </div>
+      </div>
+    </li>`;
+  }).join('');
+}
+
+async function openNewsDetail(slug) {
+  try {
+    const res = await fetch(`/_news/${slug}.md`);
+    const text = await res.text();
+    const { data, content } = parseFrontMatter(text);
+
+    document.getElementById('news-detail-img').src = data.image || '';
+    document.getElementById('news-detail-tag').textContent = data.tag || '';
+    document.getElementById('news-detail-date').textContent = data.date || '';
+    document.getElementById('news-detail-title').textContent = data.title || '';
+    document.getElementById('news-detail-body').innerHTML = parseMarkdown(content);
+
+    navigateTo('news-detail-dynamic');
+    lucide.createIcons();
+  } catch(e) {
+    console.error('無法載入文章', e);
+  }
+}
+
+function renderNewsGrid(articles, targetId = 'news-grid') {
+  const grid = document.getElementById(targetId);
+  if (!grid) return;
   if (!articles.length) {
     grid.innerHTML = '<div class="md:col-span-2 lg:col-span-3 text-center py-12 text-[#9C8777]">目前暫無消息</div>';
     return;
