@@ -1,0 +1,12 @@
+---
+name: 全齡健體課程
+name_en: Fitness for All Ages
+category: 全齡健體課程
+level: 長青護理
+image: /images/uploads/gemini_generated_image_ysbfggysbfggysbf.png
+description: 針對銀髮族設計，著重關節活動度與預防跌倒的基礎肌力訓練，找回日常自主力。
+category_en: Fitness for All Ages
+category_desc: 針對特定族群與特殊需求量身打造的專屬課程，提供更安全、更有針對性的專業指導。
+order: 12
+published: true
+---
