@@ -1,6 +1,6 @@
 ---
 title: 專屬「企業或社區運動日與運動會」正式開放報名
-date: 2026.03.01
+date: 
 tag: 企劃活動
 image: https://yourimageshare.com/ib/NQDxdXT1xO.png
 excerpt: 透過團隊合作與趣味競賽，為您的企業或社區凝聚向心力並激發健康活力！歡迎福委會與社區管委會洽詢專屬客製化方案。
