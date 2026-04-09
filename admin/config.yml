@@ -50,7 +50,7 @@ collections:
     label: "專業課程"
     folder: "_courses"
     create: true
-   slug: "course-{{fields.order}}"
+    slug: "course-{{fields.order}}"
     summary: "{{category}} — {{name}}"
     fields:
       - { label: "課程名稱", name: "name", widget: "string" }
