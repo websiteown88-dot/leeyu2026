@@ -1624,7 +1624,7 @@ function renderFacilities(items) {
 async function loadCourses() {
   const items = [];
   try {
-    const res = await fetch('https://api.github.com/repos/你的GitHub帳號/你的repo名稱/contents/_courses');
+    const res = await fetch('https://github.com/websiteown88-dot/leeyu2026.git/contents/_courses');
     const files = await res.json();
     const mdFiles = files.filter(f => f.name.endsWith('.md'));
     for (const file of mdFiles) {
