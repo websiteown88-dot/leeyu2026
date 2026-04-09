@@ -1,5 +1,5 @@
 ---
-title: 安南旗艦店盛大試營運！首波創始會員限量招募
+title: 安南區全新型態健身俱樂部盛大試營運！首波創始會員限量招募
 date: 2026.04.01
 tag: HOT NEWS
 image: /images/uploads/s__45482229_0.jpg
