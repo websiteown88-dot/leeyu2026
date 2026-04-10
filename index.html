@@ -1584,21 +1584,20 @@ function handleCorpSubmit(e) { submitToGoogle(e, 'corp', 'corp-success', 'corp-f
 // =====================================================
 async function loadFacilities() {
   const files = ['facility-1','facility-2','facility-3','facility-4','facility-5','facility-6','facility-7','facility-8'];
-  const items = [];
-  for (const file of files) {
+  const results = await Promise.all(files.map(async file => {
     try {
       const res = await fetch(`/_facilities/${file}.md`);
-      if (!res.ok) continue;
+      if (!res.ok) return null;
       const text = await res.text();
       const { data } = parseFrontMatter(text);
-      if (data.published === 'false' || data.published === false) continue;
-      items.push({ ...data, slug: file });
-    } catch(e) { console.warn('無法載入:', file); }
-  }
+      if (data.published === 'false' || data.published === false) return null;
+      return { ...data, slug: file };
+    } catch(e) { return null; }
+  }));
+  const items = results.filter(Boolean);
   items.sort((a, b) => (a.order || 0) - (b.order || 0));
   renderFacilities(items);
 }
-
 function renderFacilities(items) {
   const grid = document.getElementById('facilities-grid');
   if (!grid) return;
