@@ -1652,27 +1652,6 @@ async function loadCourses() {
   }
   items.sort((a, b) => (a.order || 0) - (b.order || 0));
   renderCourses(items);
-}
-  items.sort((a, b) => (a.order || 0) - (b.order || 0));
-  renderCourses(items);
-}
-
-async function loadCoursesFallback() {
-  const files = Array.from({length: 30}, (_, i) => `course-${i+1}`);
-  const items = [];
-  for (const file of files) {
-    try {
-      const res = await fetch(`/_courses/${file}.md`);
-      if (!res.ok) continue;
-      const text = await res.text();
-      const { data } = parseFrontMatter(text);
-      if (data.published === 'false' || data.published === false) continue;
-      items.push({ ...data, slug: file });
-    } catch(e) {}
-  }
-  items.sort((a, b) => (a.order || 0) - (b.order || 0));
-  renderCourses(items);
-}
 
 function renderCourses(items) {
   // 支援不同的容器 ID，確保一定抓得到你的 HTML
