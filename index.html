@@ -1312,6 +1312,7 @@ function navigateTo(pageId, pushToHistory = true) {
   }
 
   isNavigating = true;
+  setTimeout(() => { isNavigating = false; }, 800);
   closeMobileMenu();
 
   // 寫入瀏覽器歷史紀錄 (History API)
