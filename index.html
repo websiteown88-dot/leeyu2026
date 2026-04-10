@@ -1313,6 +1313,7 @@ function navigateTo(pageId, pushToHistory = true) {
 
   isNavigating = true;
   setTimeout(() => { isNavigating = false; }, 800);
+  if (pageId === 'presale') { startTimer(); } else { stopTimer(); }
   closeMobileMenu();
 
   // 寫入瀏覽器歷史紀錄 (History API)
@@ -1421,7 +1422,21 @@ function closeMobileMenu() {
   document.getElementById('menu-icon-close').classList.add('hidden');
 }
 
-const targetDate = new Date();
+let timerInterval = null;
+
+function startTimer() {
+  if (timerInterval) return;
+  timerInterval = setInterval(updateTimer, 1000);
+  updateTimer();
+}
+
+function stopTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+}
+  const targetDate = new Date();
 targetDate.setDate(targetDate.getDate() + 15); 
 targetDate.setHours(0, 0, 0, 0);
 
@@ -1446,8 +1461,6 @@ function updateTimer() {
     if (timerSeconds) timerSeconds.innerText = seconds.toString().padStart(2, '0');
   }
 }
-setInterval(updateTimer, 1000);
-updateTimer(); 
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz3xSF2gIHlyYvl-ms3CSTv8N2OKAX2nVvaHhLSHVcfYoxqBwU00O2tjMkb13JoHWOpbg/exec';
 
