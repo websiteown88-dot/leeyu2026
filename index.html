@@ -1636,30 +1636,23 @@ async function loadCourses() {
     const res = await fetch('https://api.github.com/repos/websiteown88-dot/leeyu2026/contents/_courses');
     const files = await res.json();
     const mdFiles = files.filter(f => f.name.endsWith('.md'));
-    for (const file of mdFiles) {
+    const results = await Promise.all(mdFiles.map(async file => {
       try {
         const r = await fetch(`/_courses/${file.name}`);
-        if (!r.ok) continue;
+        if (!r.ok) return null;
         const text = await r.text();
         const { data } = parseFrontMatter(text);
-        if (data.published === 'false' || data.published === false) continue;
-        items.push({ ...data, slug: file.name.replace('.md','') });
-      } catch(e) {}
-    }
+        if (data.published === 'false' || data.published === false) return null;
+        return { ...data, slug: file.name.replace('.md','') };
+      } catch(e) { return null; }
+    }));
+    items.push(...results.filter(Boolean));
   } catch(e) {
-    console.warn('GitHub API 失敗，改用 fallback');
-    const fallbackFiles = Array.from({length: 30}, (_, i) => `course-${i+1}`);
-    for (const file of fallbackFiles) {
-      try {
-        const r = await fetch(`/_courses/${file}.md`);
-        if (!r.ok) continue;
-        const text = await r.text();
-        const { data } = parseFrontMatter(text);
-        if (data.published === 'false' || data.published === false) continue;
-        items.push({ ...data, slug: file });
-      } catch(e) {}
-    }
+    console.warn('GitHub API 失敗');
   }
+  items.sort((a, b) => (a.order || 0) - (b.order || 0));
+  renderCourses(items);
+}
   items.sort((a, b) => (a.order || 0) - (b.order || 0));
   renderCourses(items);
 }
