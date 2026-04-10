@@ -1927,24 +1927,6 @@ function renderNewsGrid(articles, targetId = 'news-grid') {
   lucide.createIcons();
 }
 
-async function openNewsDetail(slug) {
-  try {
-    const res = await fetch(`/_news/${slug}.md`);
-    const text = await res.text();
-    const { data, content } = parseFrontMatter(text);
-
-    document.getElementById('news-detail-img').src = data.image || '';
-    document.getElementById('news-detail-tag').textContent = data.tag || '';
-    document.getElementById('news-detail-date').textContent = data.date || '';
-    document.getElementById('news-detail-title').textContent = data.title || '';
-    document.getElementById('news-detail-body').innerHTML = parseMarkdown(content);
-
-    navigateTo('news-detail-dynamic');
-    lucide.createIcons();
-  } catch(e) {
-    console.error('無法載入文章', e);
-  }
-}
 
 // 頁面載入時執行
 // Netlify Identity 登入後自動跳轉後台
