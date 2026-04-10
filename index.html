@@ -1652,7 +1652,7 @@ async function loadCourses() {
   }
   items.sort((a, b) => (a.order || 0) - (b.order || 0));
   renderCourses(items);
-
+}
 function renderCourses(items) {
   // 支援不同的容器 ID，確保一定抓得到你的 HTML
   const container = document.getElementById('courses-dynamic-container') || document.getElementById('courses-container');
