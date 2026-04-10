@@ -1835,17 +1835,17 @@ function parseFrontMatter(text) {
 // 載入新聞列表
 async function loadNews() {
   const newsFiles = ['news-1', 'news-2', 'news-3'];
-  const articles = [];
-  for (const file of newsFiles) {
+  const results = await Promise.all(newsFiles.map(async file => {
     try {
       const res = await fetch(`/_news/${file}.md`);
-      if (!res.ok) continue;
+      if (!res.ok) return null;
       const text = await res.text();
       const { data, content } = parseFrontMatter(text);
-      if (data.published === 'false' || data.published === false) continue;
-      articles.push({ ...data, content, slug: file });
-    } catch(e) { console.warn('無法載入:', file); }
-  }
+      if (data.published === 'false' || data.published === false) return null;
+      return { ...data, content, slug: file };
+    } catch(e) { return null; }
+  }));
+  const articles = results.filter(Boolean);
   renderNewsGrid(articles);
   renderNewsGrid(articles, 'home-news-grid');
 }
