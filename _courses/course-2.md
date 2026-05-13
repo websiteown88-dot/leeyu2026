@@ -1,6 +1,6 @@
 ---
 name: 拳擊有氧
-name_en: "*"
+name_en: Combat
 category: 心肺燃脂類
 level: 高強度
 image: https://yourimageshare.com/ib/wyKGIWWxL1.png
