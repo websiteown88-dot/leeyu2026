@@ -1,6 +1,6 @@
 ---
 name: 槓鈴有氧
-name_en: "*"
+name_en: "Barbell Aerobics "
 category: 肌力與雕塑類
 level: 高強度
 image: https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=800
