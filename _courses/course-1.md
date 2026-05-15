@@ -1,6 +1,6 @@
 ---
-name: 燃脂飛輪
-name_en: Spinning （Coming soon)
+name: 燃脂飛輪（Coming soon)
+name_en: Spinning
 category: 心肺燃脂類
 level: 中高強度
 image: https://yourimageshare.com/ib/HIg5yc6wX2.png
