@@ -1,6 +1,6 @@
 ---
 title: 智能室內高爾夫模擬器設備正在籌劃中，未來將打造無死角揮桿體驗
-date: null
+date: 
 tag: 場館快訊
 image: https://yourimageshare.com/ib/dboi2GAbtJ.jpg
 excerpt: 無論晴雨，都能享受揮桿樂趣！我們引進國際頂尖的高爾夫模擬系統，為 V.I.P 會員提供精準的擊球分析與虛擬下場體驗。
