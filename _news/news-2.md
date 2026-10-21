@@ -2,7 +2,7 @@
 title: 力羽健身房盛大開幕｜開幕感恩茶會圓滿舉行，攜手開啟健康新篇章
 date: null
 tag: HOT NEWS
-image: /images/uploads/58888_-e5-8e-9f-e5-9c-96-e4-b8-8d-e8-ae-8a_png-e6-a0-bc-e5-bc-8f.png
+image: /images/uploads/line_album_102感恩餐會_261007_2.jpg
 excerpt: 力羽健身房正式開幕！透過開幕感恩茶會，與來賓共享喜悅，感謝各界支持，攜手迎接健康、活力與專業兼具的運動新生活。
 published: true
 ---
