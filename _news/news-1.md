@@ -17,4 +17,8 @@ published: true
 
 感謝每一位關注與支持力羽健身的朋友，期待與大家一同見證品牌的重要時刻。未來，力羽健身也將持續帶來更多精彩活動與優質服務，陪伴大家在運動的道路上不斷突破、持續成長！
 
+> 更多照片
+>
+> [https://drive.google.com/drive/folders/1__ZXYNgQ75ek1cd9ag8qDu4sgTEbcA23?usp=sharing](https://drive.google.com/drive/folders/1__ZXYNgQ75ek1cd9ag8qDu4sgTEbcA23?usp=sharing)
+>
 >
