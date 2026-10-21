@@ -2,7 +2,7 @@
 title: 力羽健身響應【臺灣女孩日】！「拳力以赴，打出妳的自信節奏」陪伴女孩勇敢探索自我
 date: null
 tag: 企劃活動
-image: /images/uploads/58888_-e5-8e-9f-e5-9c-96-e4-b8-8d-e8-ae-8a_png-e6-a0-bc-e5-bc-8f.png
+image: /images/uploads/ef7df9ea-95a7-4421-8740-534d9c599f4d.jpg
 excerpt: 力羽健身攜手臺南市政府社會局及臺南市青少年福利服務中心，以拳擊有氧體驗與跨界分享，鼓勵女孩突破性別框架，揮出自信、勇敢追尋自己的可能。
 published: true
 ---
